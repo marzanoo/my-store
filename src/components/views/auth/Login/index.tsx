@@ -50,7 +50,11 @@ const LoginView = () => {
                         {isLoading ? 'Loading...' : 'Login'}
                     </button>
                 </form>
-            </div>
+                <hr className={styles.login__form__devider}/>
+                <div className={styles.login__form__other}>
+                    <button type='button' onClick={() => signIn('google', { callbackUrl, redirect: false })} className={styles.login__form__other__button}><i className='bx bxl-google'></i>Login with Google</button>
+                </div>
+            </div>            
             <p className={styles.login__link}>Don{"'"}t have an account? Sign Up <Link href="/auth/register">here</Link></p>
         </div>
     )
