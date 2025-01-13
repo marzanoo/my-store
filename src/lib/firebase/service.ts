@@ -28,7 +28,7 @@ export async function signUp(
         phone: string;
         role?: string;
     }, 
-    callback: Function,
+    callback: (success: boolean) => void,
 ) {
     const q = query(
         collection(firestore, 'users'),
